@@ -1,0 +1,1 @@
+# Autotests-component-for-Google-Auth-Login-Joomla-Plugin
