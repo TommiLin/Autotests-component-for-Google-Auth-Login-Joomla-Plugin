@@ -1,0 +1,50 @@
+.gat { --gat-pass: #2e7d32; --gat-fail: #c62828; --gat-warn: #b26a00; --gat-skip: #6b7280; --gat-info: #1565c0; --gat-border: rgba(128, 128, 128, .35); max-width: 1100px; }
+.gat-lead { margin: 0 0 1rem; opacity: .85; }
+.gat-panel { border: 1px solid var(--gat-border); border-radius: .5rem; padding: .75rem 1rem; margin-bottom: 1rem; }
+.gat-panel > summary { cursor: pointer; font-weight: 600; }
+.gat-env-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: .75rem; }
+.gat-env-section h4 { margin: 0 0 .35rem; font-size: 1rem; }
+.gat-env-section table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.gat-env-section td { padding: .12rem .3rem .12rem 0; vertical-align: top; word-break: break-word; }
+.gat-env-section td:first-child { opacity: .7; width: 46%; }
+.gat-env-section .lvl-ok { color: var(--gat-pass); font-weight: 600; }
+.gat-env-section .lvl-warn { color: var(--gat-warn); font-weight: 600; }
+.gat-buttons { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.gat-sep { flex: 1 1 auto; }
+.gat-options { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: .75rem 0 .5rem; font-size: .9rem; }
+.gat-options label { display: inline-flex; align-items: center; gap: .35rem; margin: 0; }
+.gat-progress { height: .5rem; border-radius: .25rem; background: var(--gat-border); overflow: hidden; margin: .5rem 0; }
+.gat-progress-bar { height: 100%; width: 0; background: var(--gat-info); transition: width .2s; }
+.gat-summary { font-size: .95rem; min-height: 1.4rem; }
+.gat-summary b { margin-right: .75rem; white-space: nowrap; }
+.gat-group { border: 1px solid var(--gat-border); border-radius: .5rem; margin-bottom: .75rem; overflow: hidden; }
+.gat-group-head { display: flex; align-items: center; gap: .6rem; padding: .5rem .75rem; background: rgba(128, 128, 128, .12); font-weight: 600; }
+.gat-group-head .gat-count { margin-left: auto; font-weight: 400; font-size: .85rem; opacity: .8; }
+.gat-test { border-top: 1px solid var(--gat-border); }
+.gat-test-row { display: grid; grid-template-columns: auto 2rem 1fr auto auto; align-items: center; gap: .5rem; padding: .45rem .75rem; cursor: pointer; }
+.gat-test-row:hover { background: rgba(128, 128, 128, .08); }
+.gat-title { font-weight: 500; }
+.gat-desc { grid-column: 3 / -1; font-size: .82rem; opacity: .7; margin-top: -.25rem; }
+.gat-tag { font-size: .7rem; border: 1px solid var(--gat-border); border-radius: .75rem; padding: .05rem .5rem; margin-left: .4rem; opacity: .85; white-space: nowrap; }
+.gat-time { font-size: .8rem; opacity: .65; min-width: 3.5rem; text-align: right; }
+.gat-badge { display: inline-block; width: 1.5rem; height: 1.5rem; line-height: 1.5rem; text-align: center; border-radius: 50%; font-size: .85rem; font-weight: 700; color: #fff; background: var(--gat-skip); }
+.gat-badge.idle { background: transparent; color: var(--gat-skip); border: 1px dashed var(--gat-border); }
+.gat-badge.pass { background: var(--gat-pass); }
+.gat-badge.fail, .gat-badge.error { background: var(--gat-fail); }
+.gat-badge.warn { background: var(--gat-warn); }
+.gat-badge.skip { background: var(--gat-skip); }
+.gat-badge.running { background: var(--gat-info); animation: gat-pulse 1s infinite; }
+@keyframes gat-pulse { 50% { opacity: .35; } }
+.gat-details { display: none; padding: .25rem 1rem .75rem 3.6rem; font-size: .85rem; }
+.gat-test.open .gat-details { display: block; }
+.gat-details ul { margin: 0; padding: 0; list-style: none; }
+.gat-details li { padding: .1rem 0 .1rem 1.3rem; position: relative; word-break: break-word; }
+.gat-details li::before { position: absolute; left: 0; font-weight: 700; }
+.gat-details li.ok::before { content: '✓'; color: var(--gat-pass); }
+.gat-details li.fail::before { content: '✗'; color: var(--gat-fail); }
+.gat-details li.warn::before { content: '!'; color: var(--gat-warn); }
+.gat-details li.info::before { content: 'i'; color: var(--gat-info); }
+.gat-details li.fail { color: var(--gat-fail); }
+.gat-footer { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.gat-hint { font-size: .8rem; opacity: .7; }
+#gat-frame { position: absolute; left: -10000px; top: 0; width: 1100px; height: 900px; border: 0; visibility: hidden; }

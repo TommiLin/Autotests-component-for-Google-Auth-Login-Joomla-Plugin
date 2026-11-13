@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_GOOGLEAUTHTESTS</name>
+    <creationDate>2026-11</creationDate>
+    <author>Tomilin Serhii</author>
+    <copyright>(C) 2026 Tomilin Serhii</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.1</version>
+    <description>COM_GOOGLEAUTHTESTS_XML_DESCRIPTION</description>
+    <namespace path="src">TommiLin\Component\GoogleAuthTests</namespace>
+
+    <administration>
+        <menu img="class:check-circle">COM_GOOGLEAUTHTESTS_MENU</menu>
+        <files folder="admin">
+            <folder>services</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/com_googleauthtests.ini</language>
+            <language tag="en-GB">en-GB/com_googleauthtests.sys.ini</language>
+            <language tag="ru-RU">ru-RU/com_googleauthtests.ini</language>
+            <language tag="ru-RU">ru-RU/com_googleauthtests.sys.ini</language>
+        </languages>
+    </administration>
+
+    <media destination="com_googleauthtests" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+</extension>

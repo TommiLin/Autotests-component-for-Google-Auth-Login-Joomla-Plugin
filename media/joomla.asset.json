@@ -1,0 +1,21 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "com_googleauthtests",
+    "version": "1.0.1",
+    "description": "Google Auth Tests assets",
+    "license": "GPL-2.0-or-later",
+    "assets": [
+        {
+            "name": "com_googleauthtests.tests",
+            "type": "style",
+            "uri": "com_googleauthtests/tests.css"
+        },
+        {
+            "name": "com_googleauthtests.tests",
+            "type": "script",
+            "uri": "com_googleauthtests/tests.js",
+            "attributes": { "defer": true },
+            "dependencies": ["core"]
+        }
+    ]
+}
